@@ -11,7 +11,7 @@ $mysql = mysqli_connect($servername, $username, $password, $dbname);
 $result_array = array();
 $vod_id = $_POST["id"];
 //This will select the specified columns-rows from the database
-$sql = "SELECT movie_properties FROM streams WHERE type = 2 AND id = 53835";
+$sql = "SELECT movie_properties FROM streams WHERE type = 2 AND id = $vod_id";
     
     /* If there are results from database push to result array */
     $result = $mysql->query($sql);
